@@ -4,45 +4,45 @@ const testimonials = [
   {
     image:
       "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=880&q=80",
-    title: "Help us improve our productivity",
+    title: "Provided clarity during a stressful career transition",
     text:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quibusdam ducimus libero ad tempora doloribus expedita laborum saepe.",
+      "The stress management resources helped me navigate a difficult job change with much more emotional balance and self-awareness than I thought possible.",
     name: "Ronik Ederson",
     role: "Marketing Manager at Stech",
   },
   {
     image:
       "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=880&q=80",
-    title: "A truly amazing experience",
+    title: "Found a compassionate community",
     text:
-      "Quidem modi reprehenderit vitae exercitationem aliquid dolores ullam temporibus enim expedita aperiam.",
+      "Connecting with others who understood my anxiety made me feel less alone. The support groups are a safe space for genuine sharing.",
     name: "Sarah Johnson",
     role: "Product Designer",
   },
   {
     image:
       "https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=880&q=80",
-    title: "Outstanding customer support",
+    title: "Essential tools for managing founder stress",
     text:
-      "Porro consequuntur saepe accusantium consequatur. Assumenda rerum culpa aperiam dolorum.",
+      "Building a company is incredibly stressful. The mindfulness exercises and practical guides have been crucial for maintaining my mental health.",
     name: "Michael Brown",
     role: "Startup Founder",
   },
   {
     image:
       "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=880&q=80",
-    title: "It changed how we work",
+    title: "Improved team communication and support",
     text:
-      "Mollitia iure consectetur dicta tenetur obcaecati corrupti aspernatur a.",
+      "Implementing mental wellness practices from the site has transformed our team's dynamics, fostering a more supportive work environment.",
     name: "David Wilson",
     role: "Operations Lead",
   },
   {
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=880&q=80",
-    title: "Highly recommended",
+    title: "Incredibly valuable resource for clients and myself",
     text:
-      "Voluptatibus delectus assumenda rerum, culpa aperiam dolorum, obcaecati corrupti.",
+      "I recommend this platform to my clients for self-guided support, and I use the professional resources to enhance my own practice.",
     name: "Emily Carter",
     role: "Business Consultant",
   },
