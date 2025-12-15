@@ -9,15 +9,18 @@ function Hero() {
       {/* HEADER - Change from sticky to fixed with proper positioning */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-sm">
         <nav className="flex items-center justify-between p-6 lg:px-8">
-          {/* Logo */}
+          {/* Logo - Replaced with your logo */}
           <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="#" className="-m-1.5 p-1.5 flex items-center gap-2">
               <span className="sr-only">Mindful Support Hub</span>
-              <img
-                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                alt="Mindful Support Hub Logo"
-                className="h-8 w-auto"
-              />
+              <div className="flex items-center">
+                <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">M</span>
+                </div>
+                <span className="ml-2 text-xl font-semibold text-white hidden sm:block">
+                  Mindful<span className="text-blue-300">Support</span>
+                </span>
+              </div>
             </a>
           </div>
 
@@ -70,14 +73,13 @@ function Hero() {
         {/* MOBILE MENU */}
         {menuOpen && (
           <div className="fixed inset-0 z-50 bg-gray-900 px-6 py-6 lg:hidden">
+            {/* Logo for mobile - Replaced with your mobile logo */}
             <div className="flex items-center justify-between">
-              <div>
-                <span className="sr-only">Mindful Support Hub</span>
-                <img
-                  src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                  alt="Mindful Support Hub Logo"
-                  className="h-8 w-auto"
-                />
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">M</span>
+                </div>
+                <span className="text-xl font-semibold text-white">Mindful<span className="text-blue-300">Support</span></span>
               </div>
               <button 
                 onClick={() => setMenuOpen(false)}
