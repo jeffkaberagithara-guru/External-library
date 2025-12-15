@@ -17,7 +17,7 @@ function Hero() {
                 <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-lg">M</span>
                 </div>
-                <span className="ml-2 text-xl font-semibold text-white hidden sm:block">
+                <span className="ml-2 text-xl font-semibold text-white">
                   Mindful<span className="text-blue-300">Support</span>
                 </span>
               </div>
@@ -75,12 +75,17 @@ function Hero() {
           <div className="fixed inset-0 z-50 bg-gray-900 px-6 py-6 lg:hidden">
             {/* Logo for mobile - Replaced with your mobile logo */}
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">M</span>
+              <a href="#" className="-m-1.5 p-1.5 flex items-center gap-2">
+                <span className="sr-only">Mindful Support Hub</span>
+                <div className="flex items-center">
+                  <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold text-lg">M</span>
+                  </div>
+                  <span className="ml-2 text-xl font-semibold text-white">
+                    Mindful<span className="text-blue-300">Support</span>
+                  </span>
                 </div>
-                <span className="text-xl font-semibold text-white">Mindful<span className="text-blue-300">Support</span></span>
-              </div>
+              </a>
               <button 
                 onClick={() => setMenuOpen(false)}
                 className="p-2 text-gray-200 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md"
