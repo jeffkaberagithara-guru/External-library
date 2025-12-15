@@ -1,13 +1,54 @@
+import { FaHeartbeat, FaUserMd, FaHeadphones, FaHandsHelping, FaBrain, FaShieldAlt } from 'react-icons/fa';
+
 function Features() {
+  const mentalHealthActions = [
+    {
+      icon: <FaHeartbeat className="w-6 h-6" />,
+      title: "Mood Check-in",
+      description: "Track your emotional wellbeing with our gentle, daily check-in tool. Monitor patterns and celebrate progress.",
+      link: "#mood-check"
+    },
+    {
+      icon: <FaBrain className="w-6 h-6" />,
+      title: "Self-Assessment",
+      description: "Anonymous screening tools to help you understand your mental health. Not a diagnosis, but a starting point.",
+      link: "#assessment"
+    },
+    {
+      icon: <FaUserMd className="w-6 h-6" />,
+      title: "Find a Counselor",
+      description: "Connect with licensed therapists in your area or online. Filter by specialty, insurance, and availability.",
+      link: "#counselors"
+    },
+    {
+      icon: <FaHandsHelping className="w-6 h-6" />,
+      title: "Crisis Support",
+      description: "Immediate, confidential support when you need it most. 24/7 hotlines and chat services available.",
+      link: "#crisis"
+    },
+    {
+      icon: <FaHeadphones className="w-6 h-6" />,
+      title: "Guided Meditation",
+      description: "Calm your mind with breathing exercises and mindfulness practices designed to reduce anxiety.",
+      link: "#meditation"
+    },
+    {
+      icon: <FaShieldAlt className="w-6 h-6" />,
+      title: "Safety Planning",
+      description: "Create a personalized safety plan for difficult moments. Your wellbeing is our priority.",
+      link: "#safety"
+    }
+  ];
+
   return (
     <section className="bg-white dark:bg-gray-900">
-      <div className="container px-6 py-10 mx-auto">
+      <div className="container px-6 py-16 mx-auto">
         <div className="lg:flex lg:items-center">
           {/* Left content */}
           <div className="w-full space-y-12 lg:w-1/2">
             <div>
               <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
-                explore our <br /> awesome Components
+                Find Support <br /> Through Our Tools
               </h1>
 
               <div className="mt-2">
@@ -17,101 +58,38 @@ function Features() {
               </div>
             </div>
 
-            {/* Feature item */}
-            <div className="md:flex md:items-start md:-mx-4">
-              <span className="inline-block p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 dark:bg-blue-500 dark:text-white">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
+            {/* Mental Health Action Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {mentalHealthActions.map((action, index) => (
+                <a
+                  key={index}
+                  href={action.link}
+                  className="block p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 border border-gray-100 dark:border-gray-700"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"
-                  />
-                </svg>
-              </span>
-
-              <div className="mt-4 md:mx-4 md:mt-0">
-                <h2 className="text-xl font-semibold text-gray-700 dark:text-white">
-                  Copy & paste components
-                </h2>
-                <p className="mt-3 text-gray-500 dark:text-gray-300">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Provident ab nulla quod dignissimos.
-                </p>
-              </div>
-            </div>
-
-            {/* Feature item */}
-            <div className="md:flex md:items-start md:-mx-4">
-              <span className="inline-block p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 dark:bg-blue-500 dark:text-white">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 6V4m0 2a2 2 0 100 4"
-                  />
-                </svg>
-              </span>
-
-              <div className="mt-4 md:mx-4 md:mt-0">
-                <h2 className="text-xl font-semibold text-gray-700 dark:text-white">
-                  Zero Configuration
-                </h2>
-                <p className="mt-3 text-gray-500 dark:text-gray-300">
-                  No setup required. Everything works out of the box.
-                </p>
-              </div>
-            </div>
-
-            {/* Feature item */}
-            <div className="md:flex md:items-start md:-mx-4">
-              <span className="inline-block p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 dark:bg-blue-500 dark:text-white">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M17.657 18.657A8 8 0 016.343 7.343"
-                  />
-                </svg>
-              </span>
-
-              <div className="mt-4 md:mx-4 md:mt-0">
-                <h2 className="text-xl font-semibold text-gray-700 dark:text-white">
-                  Elegant Dark Mode
-                </h2>
-                <p className="mt-3 text-gray-500 dark:text-gray-300">
-                  Automatically adapts to system preferences.
-                </p>
-              </div>
+                  <div className="flex items-start space-x-4">
+                    <span className="inline-block p-3 text-blue-500 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
+                      {action.icon}
+                    </span>
+                    <div>
+                      <h2 className="text-lg font-semibold text-gray-800 dark:text-white">
+                        {action.title}
+                      </h2>
+                      <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                        {action.description}
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              ))}
             </div>
           </div>
 
           {/* Right image */}
           <div className="hidden lg:flex lg:w-1/2 lg:justify-center">
             <img
-              className="w-[28rem] h-[28rem] object-cover rounded-full xl:w-[34rem] xl:h-[34rem]"
-              src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8"
-              alt="Feature illustration"
+              className="w-[28rem] h-[28rem] object-cover rounded-full xl:w-[34rem] xl:h-[34rem] shadow-lg"
+              src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Person practicing mindfulness in a peaceful environment"
             />
           </div>
         </div>

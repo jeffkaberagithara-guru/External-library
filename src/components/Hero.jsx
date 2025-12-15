@@ -12,10 +12,10 @@ function Hero() {
           {/* Logo */}
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
+              <span className="sr-only">Mindful Support Hub</span>
               <img
                 src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                alt="Logo"
+                alt="Mindful Support Hub Logo"
                 className="h-8 w-auto"
               />
             </a>
@@ -25,19 +25,21 @@ function Hero() {
           <div className="lg:hidden">
             <button
               onClick={() => setMenuOpen(true)}
-              className="p-2.5 text-gray-200"
+              className="p-2.5 text-gray-200 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-gray-900"
+              aria-label="Open menu"
+              aria-expanded={menuOpen}
             >
               <HiMenu className="w-6 h-6" />
             </button>
           </div>
 
           {/* Desktop menu */}
-          <div className="hidden lg:flex lg:gap-x-12">
-            {["Product", "Features", "Marketplace", "Company"].map((item) => (
+          <div className="hidden lg:flex lg:gap-x-8">
+            {["Home", "Self Help", "Find Support", "Learn", "Crisis"].map((item) => (
               <a
                 key={item}
                 href="#"
-                className="text-sm font-semibold text-white hover:text-indigo-400 transition"
+                className="text-sm font-medium text-gray-300 hover:text-white transition-colors focus:outline-none focus:text-white px-3 py-2 rounded-md hover:bg-white/5 focus:bg-white/5"
               >
                 {item}
               </a>
@@ -45,8 +47,11 @@ function Hero() {
           </div>
 
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm font-semibold text-white">
-              Log in →
+            <a 
+              href="#" 
+              className="text-sm font-medium text-gray-300 hover:text-white transition-colors focus:outline-none focus:text-white px-4 py-2 rounded-md hover:bg-white/5 focus:bg-white/5"
+            >
+              Log in
             </a>
           </div>
         </nav>
@@ -55,29 +60,38 @@ function Hero() {
         {menuOpen && (
           <div className="fixed inset-0 z-50 bg-gray-900 px-6 py-6 lg:hidden">
             <div className="flex items-center justify-between">
-              <img
-                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                alt="Logo"
-                className="h-8 w-auto"
-              />
-              <button onClick={() => setMenuOpen(false)}>
-                <HiX className="w-6 h-6 text-white" />
+              <div>
+                <span className="sr-only">Mindful Support Hub</span>
+                <img
+                  src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                  alt="Mindful Support Hub Logo"
+                  className="h-8 w-auto"
+                />
+              </div>
+              <button 
+                onClick={() => setMenuOpen(false)}
+                className="p-2 text-gray-200 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md"
+                aria-label="Close menu"
+              >
+                <HiX className="w-6 h-6" />
               </button>
             </div>
 
-            <div className="mt-6 space-y-4">
-              {["Product", "Features", "Marketplace", "Company"].map((item) => (
+            <div className="mt-8 space-y-1">
+              {["Home", "Self Help", "Find Support", "Learn", "Crisis"].map((item) => (
                 <a
                   key={item}
                   href="#"
-                  className="block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-white/5"
+                  className="block rounded-lg px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 focus:outline-none focus:text-white focus:bg-white/5 transition-colors"
+                  onClick={() => setMenuOpen(false)}
                 >
                   {item}
                 </a>
               ))}
               <a
                 href="#"
-                className="block rounded-lg px-3 py-2.5 text-base font-semibold text-white hover:bg-white/5"
+                className="block rounded-lg px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 focus:outline-none focus:text-white focus:bg-white/5 transition-colors mt-4"
+                onClick={() => setMenuOpen(false)}
               >
                 Log in
               </a>
@@ -100,26 +114,50 @@ function Hero() {
       {/* HERO CONTENT */}
       <div className="relative px-6 pt-32 pb-40 text-center lg:px-8">
         <div className="mx-auto max-w-2xl">
+          {/* Trust signal - added at top */}
+          <div className="mb-6 text-sm text-indigo-300">
+            <span className="bg-white/10 px-3 py-1 rounded-full">Free & anonymous • No sign-up required</span>
+          </div>
+
+          {/* Changed headline */}
           <h1 className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">
-            Data to enrich your online business
+            Your mental health
+            <span className="block">matters here</span>
           </h1>
 
-          <p className="mt-8 text-lg text-gray-400">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-            lorem cupidatat commodo.
+          {/* Human-first value proposition - added under headline */}
+          <p className="mt-8 text-lg text-gray-300">
+            A safe, private space where you can find support without judgment or pressure.
           </p>
 
+          {/* Short "What you can do here" hint - added */}
+          <p className="mt-4 text-gray-400">
+            Explore resources, practice self-care, or connect with understanding.
+          </p>
+
+          {/* Changed CTAs */}
           <div className="mt-10 flex justify-center gap-x-6">
+            {/* Primary action - low commitment */}
             <a
               href="#"
-              className="rounded-md bg-indigo-500 px-4 py-2.5 text-sm font-semibold text-white shadow hover:bg-indigo-400"
+              className="rounded-md bg-indigo-500 px-6 py-3 text-sm font-semibold text-white shadow hover:bg-indigo-400 transition"
             >
-              Get started
+              Check in with yourself
             </a>
-            <a href="#" className="text-sm font-semibold text-white">
-              Learn more →
+            
+            {/* Secondary action - urgent support */}
+            <a 
+              href="#"
+              className="rounded-md border border-red-400/30 px-6 py-3 text-sm font-semibold text-red-300 hover:bg-red-900/20 transition"
+            >
+              Crisis support →
             </a>
           </div>
+
+          {/* Added privacy reassurance */}
+          <p className="mt-6 text-sm text-gray-500">
+            Your privacy is protected. No personal data required to get started.
+          </p>
         </div>
       </div>
     </div>
